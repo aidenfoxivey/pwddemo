@@ -9,7 +9,7 @@ def main():
 	# create the existing password
 	existing_pwd()
 
-	newpwd = getpass.getpass("Please input your password.\t")
+	newpwd = getpass.getpass("Please input your password:\t")
 	new_hash = hash_new(newpwd, salt)
 			   
 		# test for equality of the passwords
@@ -38,4 +38,5 @@ def hash_new(password, salt):
 			iterations,
 			)
 
-main()
+if __name__ == "__main__":
+	main()
